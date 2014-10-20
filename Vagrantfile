@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "udacity/puppet-masterless"
-  config.vm.provision "shell", inline: "sudo puppet module install maestrodev/rvm"
+  config.vm.provision "shell", inline: "sudo apt-get update -qy&&sudo puppet module install maestrodev/rvm"
 
   config.vm.provider "virtualbox" do |v|
     v.memory = 2048

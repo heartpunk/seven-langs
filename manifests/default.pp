@@ -22,3 +22,23 @@ package { 'io-lang':
   source   => '/home/vagrant/IoLanguage-2013.11.04-Linux-x64.deb',
   require  => Exec['io-lang-debian-package'],
 }
+
+package { 'swi-prolog':
+  ensure => present,
+}
+
+package { 'haskell-platform':
+  ensure => present,
+}
+
+package { 'erlang':
+  ensure => present,
+}
+
+package { 'leiningen':
+  ensure => present,
+}
+
+package { 'scala':
+  ensure => present,
+}
